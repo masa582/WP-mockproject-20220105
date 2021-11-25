@@ -1,4 +1,4 @@
-function twpp_enqueue_styles(){
+<?php function twpp_enqueue_styles(){
 wp_enqueue_style('reset-sheet', get_template_directory_uri() . "/css/reset.css");
 wp_enqueue_style('main-style-sheet', get_template_directory_uri() . "/style.css");
 }
@@ -17,10 +17,10 @@ true
 );
 }
 add_action('wp_enqueue_scripts', 'twpp_enqueue_scripts');
-?>
+
 
 function replaceImagePath($arg) {
 $content = str_replace('"img/', '"' . get_bloginfo('template_directory') . '/img/', $arg);
 return $content;
 }
-add_action('the_content', 'replaceImagePath');
+add_action('the_content', 'replaceImagePath');?>

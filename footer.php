@@ -16,13 +16,13 @@
     </div>
   </footer>
   </div>
-  <script src="js/picturefill.min.js"></script>
-  <script src="js/jquery-3.6.0.min.js"></script>
-  <script src="js/TweenMax.min.js"></script> -->
-  <script src="js/ScrollMagic.min.js"></script>
-  <script src="js/locomotive-scroll.min.js"></script>
-  <script src="js/swiper-bundle.min.js"></script>
-  <script src="js/main.js"></script>
+  <script src="<?php echo get_template_directory_uri(); ?>/js/picturefill.min.js"></script>
+  <script src="<?php echo get_template_directory_uri(); ?>/js/jquery-3.6.0.min.js"></script>
+  <script src="<?php echo get_template_directory_uri(); ?>/js/TweenMax.min.js"></script> -->
+  <script src="<?php echo get_template_directory_uri(); ?>/js/ScrollMagic.min.js"></script>
+  <script src="<?php echo get_template_directory_uri(); ?>/js/locomotive-scroll.min.js"></script>
+  <script src="<?php echo get_template_directory_uri(); ?>/js/swiper-bundle.min.js"></script>
+  <script src="<?php echo get_template_directory_uri(); ?>/js/main.js"></script>
   <script>
     $(window).on('load', () => {
       $('.loading-screen').fadeOut(2000);

@@ -6,13 +6,13 @@
   <meta charset="<?php bloginfo('charset'); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>COACHTECH_mock_site</title>
-  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/reset.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="css/aos.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/locomotive-scroll.min.css">
-  <link rel="stylesheet" href="css/swiper-bundle.min.css">
-  <link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/style.css">
+  <link href="<?php echo get_template_directory_uri(); ?>/css/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/locomotive-scroll.min.css">
+  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/swiper-bundle.min.css">
+  <!-- <link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/style.css"> -->
   <?php wp_head(); ?>
 </head>
 
