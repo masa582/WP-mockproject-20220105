@@ -1,4 +1,7 @@
-<?php function twpp_enqueue_styles(){
+<?php
+remove_action('template_redirect', 'redirect_canonical');
+
+function twpp_enqueue_styles(){
 wp_enqueue_style('reset-sheet', get_template_directory_uri() . "/css/reset.css");
 wp_enqueue_style('main-style-sheet', get_template_directory_uri() . "/style.css");
 }

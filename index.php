@@ -21,7 +21,7 @@
             <ul class="newsCnt">
               <li class="newslist">
                 <div newslist-wrapper>
-                  <a href="#">
+                  <a href="/archive-news1.php">
                     <div class="newsDate">
                       <p>2021年5月30日</p>
                     </div>
