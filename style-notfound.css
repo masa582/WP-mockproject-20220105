@@ -443,12 +443,10 @@ box-sizing: border-box *, *:before, *:after {
     height: 100vh;
     background-color: wheat;
     font-size: 1.5rem;
-    background-image: url("/img/inquiry.jpg ");
 }
 
 .news_mainBg_wrapper {
     height: 60vh;
-    background-image: url("/img/inquiry.jpg ");
     /* height: calc(var(--vh, 1vh) * 100); */
     /* top: 100px; */
     /* position: absolute; */
@@ -457,7 +455,6 @@ box-sizing: border-box *, *:before, *:after {
 
 .news_mainBg_inner {
     position: relative;
-    background-image: url("/img/inquiry.jpg ");
     /* 変更 */
 }
 
