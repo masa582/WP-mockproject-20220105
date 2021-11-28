@@ -1,9 +1,6 @@
 <?php
-remove_action('template_redirect', 'redirect_canonical');
-
 function twpp_enqueue_styles(){
 wp_enqueue_style('reset-sheet', get_template_directory_uri() . "/css/reset.css");
-wp_enqueue_style('main-style-sheet', get_template_directory_uri() . "/style.css");
 }
 add_action('wp_enqueue_scripts', 'twpp_enqueue_styles');
 
@@ -22,8 +19,8 @@ true
 add_action('wp_enqueue_scripts', 'twpp_enqueue_scripts');
 
 
-function replaceImagePath($arg) {
-$content = str_replace('"img/', '"' . get_bloginfo('template_directory') . '/img/', $arg);
-return $content;
-}
-add_action('the_content', 'replaceImagePath');?>
+// function replaceImagePath($arg) {
+// $content = str_replace('"img/', '"' . get_bloginfo('template_directory') . '/img/', $arg);
+// return $content;
+// }
+// add_action('the_content', 'replaceImagePath');?>

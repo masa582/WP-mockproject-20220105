@@ -1,4 +1,9 @@
     <?php get_header(); ?>
+
+    <div class="loading-screen">
+      <div class="loading01"><span class="loading01"><span></span></span></div>
+      <img src="<?php echo get_template_directory_uri(); ?>/img/estra_whitelogo.png" alt="ロゴ" class="loadingImg" 　>
+    </div>
     <div class="cover">
 
       <video playsinline src="<?php echo get_template_directory_uri(); ?>/video/movie_2.mp4" loop autoplay muted class="video">

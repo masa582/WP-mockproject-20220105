@@ -1,3 +1,8 @@
+<?php
+/*
+Template Name: news_list_2
+*/
+?>
 <?php get_header(); ?>
 </div>
 <main class="main">

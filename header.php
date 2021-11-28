@@ -12,17 +12,19 @@
   <link href="<?php echo get_template_directory_uri(); ?>/css/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/locomotive-scroll.min.css">
   <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/swiper-bundle.min.css">
-  <!-- <link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/style.css"> -->
+  <?php if (is_home()) : ?>
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/style.css">
+  <?php endif; ?>
   <?php wp_head(); ?>
 </head>
 
 <body data-aos-easing="ease" data-aos-duration="500" data-aos-delay="0" cz-shortcut-listen="true" <?php body_class('index typesquare_option is-load'); ?>>
 
 
-  <div class="loading-screen">
+  <!-- <div class="loading-screen">
     <div class="loading01"><span class="loading01"><span></span></span></div>
     <img src="<?php echo get_template_directory_uri(); ?>/img/estra_whitelogo.png" alt="ロゴ" class="loadingImg" 　>
-  </div>
+  </div> -->
 
   <noscript>
     <p style="color: #f00; font-weight: bold; padding: 5px; background: #eee; text-align: center;">
