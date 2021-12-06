@@ -22,7 +22,6 @@
   <script src="<?php echo get_template_directory_uri(); ?>/js/ScrollMagic.min.js"></script>
   <script src="<?php echo get_template_directory_uri(); ?>/js/locomotive-scroll.min.js"></script>
   <script src="<?php echo get_template_directory_uri(); ?>/js/swiper-bundle.min.js"></script>
-  <script src="<?php echo get_template_directory_uri(); ?>/js/main.js"></script>
   <script>
     $(window).on('load', () => {
       $('.loading-screen').fadeOut(2000);
