@@ -3,7 +3,7 @@
 Template Name: archive
 */
 ?>
-<?php get_header(); ?>
+<?php get_header("single"); ?>
 </div>
 <main class="main">
  <section class="news_mainBg_wrapper">

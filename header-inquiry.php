@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/locomotive-scroll.min.css">
   <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/swiper-bundle.min.css">
   <link href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" rel="stylesheet">
-  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style-notfound.css">
+  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style-news_inquiry.css">
   <?php wp_head(); ?>
 </head>
 <script>
@@ -39,9 +39,9 @@
         <div>
           <nav class="header-nav">
             <ul class="navigationInnerList">
-              <li><a href="/"><span class="c-border c-border-font">ホーム</span></a></li>
-              <li><a href="/news/"><span class="c-border c-border-font">ニュース</span></a></li>
-              <li><a href="/inquiry/"><span class="c-border c-border-font">お問い合わせ</span></a></li>
+              <li><a href="<?php echo esc_url(home_url('/')); ?>"><span class="c-border c-border-font">ホーム</span></a></li>
+              <li><a href="<?php echo esc_url(home_url('/news/')); ?>"><span class="c-border c-border-font">ニュース</span></a></li>
+              <li><a href="<?php echo esc_url(home_url('/inquiry/')); ?>"><span class="c-border c-border-font">お問い合わせ</span></a></li>
             </ul>
           </nav>
         </div>

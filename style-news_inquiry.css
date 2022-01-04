@@ -321,7 +321,7 @@ box-sizing: border-box *, *:before, *:after {
 
 .main {
     position: relative;
-    height: 197vh;
+    min-height: 203vh;
     background-color: wheat;
     font-size: 1.5rem;
 }
@@ -340,7 +340,8 @@ box-sizing: border-box *, *:before, *:after {
 }
 
 .news_mainBg {
-    background-image: url("/img/inquiry.jpg");
+    /* background-image: url("/img/inquiry.jpg"); */
+    background-image: url(./img/inquiry.jpg);
     background-size: cover;
     height: 60vh;
     display: block;
@@ -350,13 +351,10 @@ box-sizing: border-box *, *:before, *:after {
     background-color: #06397D;
     height: 20vh;
     width: 100%;
-    /* position: relative; */
 }
 
 .news_accent_ttl {
-    top: 63rem;
-    left: 19rem;
-    position: absolute;
+    padding: 5rem 0rem 0rem 5rem;
     font-size: 6rem;
     color: #fff;
 }
@@ -693,7 +691,7 @@ button {
     transition: 0.3s;
     width: 0%;
     background: #000
-    /*変更済み*/
+        /*変更済み*/
 }
 
 .navigationInnerList li>a {
@@ -739,6 +737,10 @@ button {
 
 .c-border-font {
     color: black;
+}
+
+.space {
+    margin-bottom: 12rem;
 }
 
 /* footerの部分 */

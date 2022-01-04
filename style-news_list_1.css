@@ -2,7 +2,9 @@
 
 /* ここから　全体に適用 */
 
-box-sizing: border-box *, *:before, *:after {
+box-sizing: border-box *,
+*:before,
+*:after {
     -webkit-box-sizing: border-box;
     box-sizing: border-box
 }
@@ -119,7 +121,8 @@ box-sizing: border-box *, *:before, *:after {
     position: relative
 }
 
-[data-aos="new-animation2"]:after, [data-aos="new-animation2"]:before {
+[data-aos="new-animation2"]:after,
+[data-aos="new-animation2"]:before {
     content: '';
     display: block;
     width: 100%;
@@ -312,45 +315,37 @@ box-sizing: border-box *, *:before, *:after {
 
 .main {
     position: relative;
-    height: 160vh;
     background-color: wheat;
 }
 
 .news_mainBg_wrapper {
-    height: 150vh;
-    height: calc(var(--vh, 1vh) * 100);
-    top: 100px;
-    /* position: absolute; */
-    /* z-index: 1;変更 */
+
 }
 
 .news_maingBg_inner {
     position: relative;
-    /* 変更 */
 }
 
 .news_mainBg {
-    background-image: url("/img/news.jpg");
+    background-image: url("./img/news.jpg");
     height: 60vh;
     display: block;
 }
 
 .news_accent {
     background-color: #06397D;
-    height: 20vh;
-    /* position: relative; */
+    height: 20rem;
+    width: 100%;
 }
 
 .news_accent_ttl {
-    top: 63rem;
-    left: 19rem;
-    position: absolute;
-    font-size: 6rem;
+    padding: 7rem 0rem 7rem 20rem;
+    font-size: 5rem;
     color: #fff;
 }
 
 .news_mainsec {
-    margin: 10rem 20rem;
+    margin: 5rem 20rem;
 }
 
 .newsCntSec {
@@ -370,6 +365,7 @@ box-sizing: border-box *, *:before, *:after {
 
 .news_mainsec dt {
     margin-right: 2rem;
+    white-space: nowrap;
     text-align: right;
     display: inline-block;
     width: 12rem;
@@ -380,18 +376,19 @@ box-sizing: border-box *, *:before, *:after {
     /* padding-left: 6rem; */
 }
 
-.newsCard_oshirase {
+.newsCard {
     padding: 0.5rem;
-    background: #36E21F;
-    color: #fff;
+    white-space: nowrap;
+     color: #fff;
     font-size: 1.4rem;
 }
 
-.newsCard_service {
-    padding: 0.5rem;
+.newsCard.info {
+    background: #36E21F;
+}
+
+.newsCard.service {
     background: #9E4A91;
-    color: #fff;
-    font-size: 1.4rem;
 }
 
 .newsCnt {
@@ -415,7 +412,8 @@ box-sizing: border-box *, *:before, *:after {
     transition: 0.3s
 }
 
-.c-buttonStyle1 .c-border:before, .c-buttonStyle1 .c-border:after {
+.c-buttonStyle1 .c-border:before,
+.c-buttonStyle1 .c-border:after {
     content: '';
     display: block;
     height: 1px;
@@ -445,7 +443,8 @@ box-sizing: border-box *, *:before, *:after {
     transition: 0.3s
 }
 
-.c-buttonStyle1 .c-icon:before, .c-buttonStyle1 .c-icon:after {
+.c-buttonStyle1 .c-icon:before,
+.c-buttonStyle1 .c-icon:after {
     content: '';
     display: block;
     position: absolute;
@@ -521,7 +520,7 @@ box-sizing: border-box *, *:before, *:after {
     transition: 0.3s;
     width: 0%;
     background: #000
-    /*変更済み*/
+        /*変更済み*/
 }
 
 .navigationInnerList li>a {
@@ -530,11 +529,14 @@ box-sizing: border-box *, *:before, *:after {
     padding-bottom: 6px
 }
 
-.navigationInnerList li>a.is-current .c-border:before, .navigationInnerList li>a.is-open .c-border:before, .navigationInnerList li>a:hover .c-border:before {
+.navigationInnerList li>a.is-current .c-border:before,
+.navigationInnerList li>a.is-open .c-border:before,
+.navigationInnerList li>a:hover .c-border:before {
     width: 100%
 }
 
-.navigationInnerList li .subNavTit a .c-border:before, .navigationInnerList li .subNavTit a .c-border:after {
+.navigationInnerList li .subNavTit a .c-border:before,
+.navigationInnerList li .subNavTit a .c-border:after {
     content: "";
     display: block;
     height: 1px;
@@ -569,6 +571,43 @@ box-sizing: border-box *, *:before, *:after {
     color: black;
 }
 
+.pagination {
+    margin: 40px 0 0;
+}
+
+.nav-links {
+    display: flex;
+}
+
+.pagination .page-numbers {
+    display: inline-block;
+    margin-right: 20px;
+    padding: 20px 25px;
+    color: #333;
+    border-radius: 3px;
+    box-shadow: 0 3px 3px #999;
+    background: #fff;
+}
+
+.pagination .current {
+    padding: 20px 25px;
+    background: #69a4db;
+    color: #fff;
+}
+
+.pagination .prev,
+.pagination .next {
+    background: transparent;
+    box-shadow: none;
+    color: #69a4db;
+}
+
+.pagination .dots {
+    background: transparent;
+    box-shadow: none;
+}
+
+
 /* footerの部分 */
 
 .footer {
@@ -576,8 +615,8 @@ box-sizing: border-box *, *:before, *:after {
     background: #000;
     height: 300px;
     padding: 50px 5%;
-    position: absolute;
-    width: 89%;
+    /* position: absolute; */
+    width: 100%;
     z-index: 101;
 }
 

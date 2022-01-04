@@ -33,8 +33,8 @@
         <nav class="header-nav">
           <ul class="navigationInnerList">
             <li><a href="<?php echo esc_url(home_url('/')); ?>"><span class="c-border">ホーム</span></a></li>
-            <li><a href="<?php echo esc_url(home_url('/')); ?>"><span class="c-border">ニュース</span></a></li>
-            <li><a href="<?php echo esc_url(home_url('/')); ?>"><span class="c-border">お問い合わせ</span></a></li>
+            <li><a href="<?php echo esc_url(home_url('/news/')); ?>"><span class="c-border">ニュース</span></a></li>
+            <li><a href="<?php echo esc_url(home_url('/inquiry/')); ?>"><span class="c-border">お問い合わせ</span></a></li>
           </ul>
         </nav>
       </div>
