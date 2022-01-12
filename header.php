@@ -22,7 +22,7 @@
       このページはJavaScriptを使用しています。JavaScriptを有効にしてご覧ください。</p>
   </noscript>
 
-  <div class="wrarpper">
+  <div class="wrapper">
     <header class="header">
       <div class="header-wrap">
         <a href="/">

@@ -18,7 +18,7 @@
   </div>
   <script src="<?php echo get_template_directory_uri(); ?>/js/picturefill.min.js"></script>
   <script src="<?php echo get_template_directory_uri(); ?>/js/jquery-3.6.0.min.js"></script>
-  <script src="<?php echo get_template_directory_uri(); ?>/js/TweenMax.min.js"></script> -->
+  <script src="<?php echo get_template_directory_uri(); ?>/js/TweenMax.min.js"></script> 
   <script src="<?php echo get_template_directory_uri(); ?>/js/ScrollMagic.min.js"></script>
   <script src="<?php echo get_template_directory_uri(); ?>/js/locomotive-scroll.min.js"></script>
   <script src="<?php echo get_template_directory_uri(); ?>/js/swiper-bundle.min.js"></script>

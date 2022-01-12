@@ -158,5 +158,6 @@
             </div>
           </section>
         </article>
+      </section>
     </main>
     <?php get_footer(); ?>
