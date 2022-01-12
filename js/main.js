@@ -1,4 +1,4 @@
- var mySwiper = new Swiper(".swiper-container", {
+var mySwiper = new Swiper(".swiper-container", {
         // スライドの仕方
         effect: "fade",
         // 最後まで行ったら最初に
@@ -16,6 +16,24 @@
           clickable: true //ページネーションをクリックでスライド移動
         }
       });
+
+// combobox
+
+//select要素を取得する
+$('.select').change(function() {
+   var r = $('option:selected').val();
+  console.log(r);
+  if r=oshirase,
+    //ここに処理を記述する
+})
+
+
+/* const selectFoodName = document.getElementById('food-name'); */
+
+
+
+
+
 
 // モーダル関連　test用
 $(function () {
@@ -45,6 +63,20 @@ window.addEventListener('click', (e) => {
   }
 });
 
+
+$(function() {
+
+  $('.submit').attr('disabled', 'disabled');
+
+  $('#agree').on('click', function() {
+      if ($(this).prop('checked') == false) {
+        $('.submit').attr('disabled', 'disabled');
+      } else {
+        $('.submit').removeAttr('disabled');
+      }
+    });
+ 
+ });
 
 /*
  * common.funcs.js

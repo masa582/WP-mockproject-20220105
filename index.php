@@ -107,16 +107,16 @@
               <div class="swiper-wrapper">
                 <!-- スライドの中身 -->
                 <div class="swiper-slide swiper-img1">
-                  <img src="<?php echo get_template_directory_uri(); ?>/img/company/company1.jpg" alt="">
+                  <img src="<?php echo get_template_directory_uri(); ?>/img/company/company1.jpg" alt="企業情報イメージ1">
                 </div>
                 <div class="swiper-slide swiper-img2">
-                  <img src="<?php echo get_template_directory_uri(); ?>/img/company/company2.jpg" alt="">
+                  <img src="<?php echo get_template_directory_uri(); ?>/img/company/company2.jpg" alt="企業情報イメージ2">
                 </div>
                 <div class="swiper-slide swiper-img3">
-                  <img src="<?php echo get_template_directory_uri(); ?>/img/company/company3.jpg" alt="">
+                  <img src="<?php echo get_template_directory_uri(); ?>/img/company/company3.jpg" alt="企業情報イメージ3">
                 </div>
                 <div class="swiper-slide swiper-img3">
-                  <img src="<?php echo get_template_directory_uri(); ?>/img/company/company4.jpg" alt="">
+                  <img src="<?php echo get_template_directory_uri(); ?>/img/company/company4.jpg" alt="企業情報イメージ4">
                 </div>
               </div>
               <!-- ページネーション -->

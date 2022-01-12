@@ -3,7 +3,9 @@
 
 /* ここから　全体に適用 */
 
-box-sizing: border-box *, *:before, *:after {
+box-sizing: border-box *,
+*:before,
+*:after {
     -webkit-box-sizing: border-box;
     box-sizing: border-box
 }
@@ -120,7 +122,8 @@ box-sizing: border-box *, *:before, *:after {
     position: relative
 }
 
-[data-aos="new-animation2"]:after, [data-aos="new-animation2"]:before {
+[data-aos="new-animation2"]:after,
+[data-aos="new-animation2"]:before {
     content: '';
     display: block;
     width: 100%;
@@ -471,7 +474,100 @@ box-sizing: border-box *, *:before, *:after {
     font-size: 1.5rem;
 }
 
-.send-button {
+.openBtn {
+    text-decoration: underline;
+    cursor: pointer;
+    border-style: none;
+    background: white;
+    margin-right: -5px;
+    font-size: 1.5rem;
+}
+
+button {
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #282828;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+
+/* submitの有効化 */
+
+.submit::-moz-foucus-inner {
+    border: none;
+    padding: 0;
+}
+
+.check:checked+span::after {
+    opacity: 1;
+}
+
+input:disabled {
+    cursor: default;
+    opacity: 0.5;
+}
+
+/* test */
+.btn-wrapper {
+    padding: 20px;
+    text-align: center;
+}
+
+.check-box {
+    margin-bottom: 20px;
+}
+
+.check {
+    display: none;
+}
+
+.check+span {
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 0.2em 0;
+    padding: 0 0 0 2em;
+    position: relative;
+}
+
+.check+span::before {
+    -webkit-transform: translateY(-50%);
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    border-radius: 2px;
+    content: "";
+    display: block;
+    height: 1.3em;
+    left: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1.3em;
+}
+
+.check+span::after {
+    -webkit-transform: translateY(-50%) rotate(-45deg);
+    border-bottom: 3px solid rgba(0, 0, 0, 0.8);
+    border-left: 3px solid rgba(0, 0, 0, 0.8);
+    content: "";
+    display: block;
+    height: 0.6em;
+    left: 1%;
+    margin-top: -0.2em;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+    transition: all 0.3s ease 0s;
+    width: 1em;
+}
+
+.check:checked+span::after {
+    opacity: 1;
+}
+
+.submit {
+    -webkit-appearance: none;
     text-align: center;
     font-size: 1.6rem;
     font-weight: 700;
@@ -493,27 +589,22 @@ box-sizing: border-box *, *:before, *:after {
     z-index: 1;
 }
 
-.send-button:hover {
-    background-color: #F56500;
-    opacity: 0.7
+.submit:hover,
+.submit:focus {
+    outline: none;
 }
 
-.openBtn {
-    text-decoration: underline;
-    cursor: pointer;
-    border-style: none;
-    background: white;
-    margin-right: -5px;
-    font-size: 1.5rem;
+.submit::-moz-foucus-inner {
+    border: none;
+    padding: 0;
 }
 
-button {
-    padding: 10px;
-    background-color: #fff;
-    border: 1px solid #282828;
-    border-radius: 2px;
-    cursor: pointer;
+button:disabled {
+    cursor: default;
+    opacity: 0.5;
 }
+
+
 
 /* モーダル用のコード */
 
@@ -585,7 +676,8 @@ button {
     transition: 0.3s
 }
 
-.c-buttonStyle1 .c-border:before, .c-buttonStyle1 .c-border:after {
+.c-buttonStyle1 .c-border:before,
+.c-buttonStyle1 .c-border:after {
     content: '';
     display: block;
     height: 1px;
@@ -615,7 +707,8 @@ button {
     transition: 0.3s
 }
 
-.c-buttonStyle1 .c-icon:before, .c-buttonStyle1 .c-icon:after {
+.c-buttonStyle1 .c-icon:before,
+.c-buttonStyle1 .c-icon:after {
     content: '';
     display: block;
     position: absolute;
@@ -700,11 +793,14 @@ button {
     padding-bottom: 6px
 }
 
-.navigationInnerList li>a.is-current .c-border:before, .navigationInnerList li>a.is-open .c-border:before, .navigationInnerList li>a:hover .c-border:before {
+.navigationInnerList li>a.is-current .c-border:before,
+.navigationInnerList li>a.is-open .c-border:before,
+.navigationInnerList li>a:hover .c-border:before {
     width: 100%
 }
 
-.navigationInnerList li .subNavTit a .c-border:before, .navigationInnerList li .subNavTit a .c-border:after {
+.navigationInnerList li .subNavTit a .c-border:before,
+.navigationInnerList li .subNavTit a .c-border:after {
     content: "";
     display: block;
     height: 1px;
@@ -742,6 +838,8 @@ button {
 .space {
     margin-bottom: 12rem;
 }
+
+
 
 /* footerの部分 */
 

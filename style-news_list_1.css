@@ -343,6 +343,8 @@ box-sizing: border-box *,
 
 .news_mainsec {
     margin: 5rem 20rem;
+    display: flex;
+    justify-content: space-between;
 }
 
 .newsCntSec {
@@ -606,6 +608,15 @@ box-sizing: border-box *,
     box-shadow: none;
 }
 
+/* combobox コンボボックス */
+.combo select {
+    border: 1px solid;
+    width: 13rem;
+    height: 4rem;
+    font-size: 2rem;
+    margin-top: 5rem;
+    margin-left:5rem ;
+}
 
 /* footerの部分 */
 
