@@ -16,10 +16,11 @@ Template Name: news_list_1
             <div class="news_mainsec">
                   <div class="newsCntSec">
                          <?php if (have_posts()) : ?>
-                              <?php while (have_posts()) : the_post(); ?>
+                              <?php while (have_posts()) : the_post() ;?>
                                     <dl>
                                           <dt><?php the_time('Y年m月d日'); ?></dt>
-                                          <dd class="newsCard <?php echo get_field('news_category')['value']; ?>">
+                                          <dd class="newsCard <?php echo get_field('news_category')['value']; 
+                                          ?>">
                                                 <?php echo get_field('news_category')['label']; ?></dd>
                                           <dd class="newsCnt"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></dd>
                                     </dl>

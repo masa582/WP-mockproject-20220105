@@ -234,14 +234,6 @@ box-sizing: border-box *,
 
 /* ここから背景動画 の範囲 */
 
-/* firstviewの会社名の部分 */
-
-.main {
-    overflow: hidden;
-    /* max-width: 100%; */
-    object-fit: contain;
-}
-
 .c-scrolldown {
     --line-height: 150px;
     --line-height-abs: -150px;
@@ -323,18 +315,12 @@ box-sizing: border-box *,
 /* 背景画像の部分 */
 
 .main {
+    overflow: hidden;
+    /* max-width: 100%; */
+    object-fit: contain;
     position: relative;
-    min-height: 203vh;
     background-color: wheat;
     font-size: 1.5rem;
-}
-
-.news_mainBg_wrapper {
-    height: 80vh;
-    /* height: calc(var(--vh, 1vh) * 100); */
-    /* top: 100px; */
-    /* position: absolute; */
-    /* z-index: 1;変更 */
 }
 
 .news_maingBg_inner {
@@ -357,7 +343,7 @@ box-sizing: border-box *,
 }
 
 .news_accent_ttl {
-    padding: 5rem 0rem 0rem 5rem;
+    padding: 5rem 0rem 0rem 15rem;
     font-size: 6rem;
     color: #fff;
 }
@@ -412,7 +398,10 @@ box-sizing: border-box *,
 /* 問合せフォーム */
 
 .inquiry_mainsec {
-    margin: 5rem 20rem;
+    margin: 0 auto;
+    width: 96rem;
+    padding: 60px;
+    white-space: nowrap;
 }
 
 .formTxt {
@@ -424,17 +413,20 @@ box-sizing: border-box *,
 }
 
 .form-content {
-    display: flex;
-    justify-content: space-between;
-    width: 45rem;
-    margin: 2rem 0rem;
+    white-space: nowrap;
+    margin-right: 130px;
+    text-align: left;
 }
 
-.form-content2 {
-    display: flex;
-    justify-content: space-between;
-    width: 33rem;
-    margin: 2rem 0rem;
+.form-content-space {
+    padding-bottom: 1rem;
+    font-weight: 500;
+}
+
+.form-content-space input {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 30rem;
 }
 
 .colorRed {
@@ -442,27 +434,44 @@ box-sizing: border-box *,
 }
 
 .inquiry-content {
+    margin-left: 2rem;
     margin-bottom: 2rem;
+    text-align: left;
 }
 
-.inquiry-content-title {
+.inquiry-content-title1 {
+    vertical-align: top;
+    padding-top: 2rem;
+    font-weight: 500;
+}
+
+
+.inquiry-content-title2 {
     margin: 1rem 4rem;
+    font-size: 1.2rem;
+    font-weight: 500;
 }
 
 .inquiry-textarea {
-    padding-left: 10rem;
-    margin-bottom: 2rem;
+    padding-top: 3rem;
+}
+
+.inquiry-textarea textarea {
+    border-radius: 5px;
+    border: 1px solid #ccc;
 }
 
 .policyBox {
-    width: 35rem;
-    padding: 2rem 6rem;
+    width: 32rem;
+    padding: 2rem 12rem;
     border: 1px solid #6c6c6c;
     background: white;
     padding-left: 10rem;
-    margin-left: 10rem;
+    margin: 0 auto;
     margin-bottom: 3rem;
     color: #2F2F2F;
+    border-radius: 5px;
+    border: 1px solid #ccc;
 }
 
 .policy-title {
@@ -572,8 +581,6 @@ input:disabled {
     font-size: 1.6rem;
     font-weight: 700;
     line-height: 1.5;
-    position: absolute;
-    left: 45rem;
     display: inline-block;
     padding: 1rem 4rem;
     transition: all 0.3s;
@@ -587,6 +594,9 @@ input:disabled {
     box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.3);
     border: solid 0px;
     z-index: 1;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 6rem;
 }
 
 .submit:hover,
@@ -834,12 +844,6 @@ button:disabled {
 .c-border-font {
     color: black;
 }
-
-.space {
-    margin-bottom: 12rem;
-}
-
-
 
 /* footerの部分 */
 

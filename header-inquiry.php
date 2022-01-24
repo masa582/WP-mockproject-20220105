@@ -28,7 +28,7 @@
 </noscript>
 
 <body>
-  <div class="wrarpper">
+  <div class="wrapper">
     <div class="header-wrap">
       <header class="header">
         <div class="header-logo-wrap">
