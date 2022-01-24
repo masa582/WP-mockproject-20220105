@@ -17,23 +17,7 @@ var mySwiper = new Swiper(".swiper-container", {
         }
       });
 
-// combobox
-
-//select要素を取得する
-$('.select').change(function() {
-   var r = $('option:selected').val();
-  console.log(r);
-  if r=oshirase,
-    //ここに処理を記述する
-})
-
-
 /* const selectFoodName = document.getElementById('food-name'); */
-
-
-
-
-
 
 // モーダル関連　test用
 $(function () {
@@ -274,3 +258,13 @@ var gNavFunc = function() {
   };
 }().init();
 
+
+// combobox
+
+/* //select要素を取得する
+$('.select').change(function () {
+  var r = $('option:selected').val();
+  console.log(r);
+  if r = oshirase,
+    //ここに処理を記述する
+}); */

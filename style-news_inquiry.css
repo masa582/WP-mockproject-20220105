@@ -400,8 +400,7 @@ box-sizing: border-box *,
 .inquiry_mainsec {
     margin: 0 auto;
     width: 96rem;
-    padding: 60px;
-    white-space: nowrap;
+    padding: 30px 180px;
 }
 
 .formTxt {
@@ -459,6 +458,9 @@ box-sizing: border-box *,
 .inquiry-textarea textarea {
     border-radius: 5px;
     border: 1px solid #ccc;
+    width: 54rem;
+    height: 22rem;
+    margin-bottom: 5rem;
 }
 
 .policyBox {
