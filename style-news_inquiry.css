@@ -411,6 +411,11 @@ box-sizing: border-box *,
     font-size: 2rem;
 }
 
+.formTxt_ttl_thx {
+    font-size: 3rem;
+    margin-bottom: 3rem
+}
+
 .form-content {
     white-space: nowrap;
     margin-right: 130px;
@@ -519,6 +524,8 @@ input:disabled {
     opacity: 0.5;
 }
 
+
+
 /* test */
 .btn-wrapper {
     padding: 20px;
@@ -601,6 +608,19 @@ input:disabled {
     margin-bottom: 6rem;
 }
 
+.wpcf7-submit {
+    font-family: "Font Awesome 5 Free" !important;
+    font-weight: 900;
+}
+
+.wpcf7-submit::after {
+    font-family: "Font Awesome 5 Free" !important;
+    /* font-family: FontAwesome !important; */
+    display: block;
+    font-weight: 400;
+    content: "\f0e0";
+}
+
 .submit:hover,
 .submit:focus {
     outline: none;
@@ -615,7 +635,6 @@ button:disabled {
     cursor: default;
     opacity: 0.5;
 }
-
 
 
 /* モーダル用のコード */

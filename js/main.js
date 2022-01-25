@@ -258,6 +258,11 @@ var gNavFunc = function() {
   };
 }().init();
 
+// contact form 7でメッセージ送信後に遷移
+
+document.addEventListener( 'wpcf7mailsent', function( event ) {
+location = 'http://portfolio3.local/thankspage/';
+}, false );
 
 // combobox
 
