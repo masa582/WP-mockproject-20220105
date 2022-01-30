@@ -1,6 +1,6 @@
     <?php get_header(); ?>
 
-    <div class="loading-screen">
+    <div class="loading-screen" id="loading-screen">
       <div class="loading01"><span class="loading01"><span></span></span></div>
       <img src="<?php echo get_template_directory_uri(); ?>/img/estra_whitelogo.png" alt="ロゴ" class="loadingImg" 　>
     </div>
@@ -23,63 +23,45 @@
           </div>
           <section class="news">
             <h2 class="newsttl">News</h2>
-            <ul class="newsCnt">
-              <li class="newslist">
-                <div newslist-wrapper>
-                  <a href="/archive-news1.php">
-                    <div class="newsDate">
-                      <p>2021年5月30日</p>
-                    </div>
-                    <div class="cardCat">お知らせ</div>
-                    <div class="newsItem">
-                      estra新代々木オフィス昨年12月に移転しました
-                    </div>
-                  </a>
-                </div>
-              </li>
-              <li class="newslist">
-                <a href="#">
-                  <div class="newsDate">
-                    <p>2021年4月10日</p>
-                  </div>
-                  <div class="cardCat">お知らせ</div>
-                  <div class="newsItem">
-                    コーポレートサイトリニューアルのお知らせ
-                  </div>
-                </a>
-              </li>
-              <li class="newslist">
-                <a href="#">
-                  <div class="newsDate">
-                    <p>2021年3月20日</p>
-                  </div>
-                  <div class="cardCat">サービス</div>
-                  <div class="newsItem">
-                    プログラミングスクールCOACHTECHがサービス開始
-                  </div>
-                </a>
-              </li>
-              <li class="newslist">
-                <a href="#">
-                  <div class="newsDate">
-                    <p>2021年2月10日</p>
-                  </div>
-                  <div class="cardCat">サービス</div>
-                  <div class="newsItem">
-                    プログラミングスクール「COACHTECH」ブランドリニューアル
-                  </div>
-                </a>
-              </li>
-            </ul>
+            <div class="news_mainsec">
+              <div class="newsCntSec">
+                <?php
+                $args = array(
+                  'post_type' => 'news', // 投稿タイプのスラッグを指定
+                  'post_status' => 'publish', // 公開済の投稿を指定
+                  'posts_per_page' => 4 // 投稿件数の指定
+                );
+                $the_query = new WP_Query($args);
+
+                if ($the_query->have_posts()) : ?>
+                  <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+                    <dl>
+                      <dt><?php the_time('Y年m月d日'); ?></dt>
+                      <dd class="newsCard <?php echo get_field('news_category')['value'];
+                                          ?>">
+                        <?php echo get_field('news_category')['label']; ?></dd>
+                      <dd class="newsCnt"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></dd>
+                    </dl>
+
+                  <?php endwhile; ?>
+                  <?php wp_reset_postdata(); ?>
+                <?php else : ?>
+                  <!-- 投稿が無い場合の処理 -->
+                <?php endif; ?>
+
+              </div>
+            </div>
+
+
             <div class="secBox_btn">
-              <a href="/about_us/" class="c-buttonStyle1">
+              <a href="/news/" class="c-buttonStyle1">
                 <span class="c-label">View More
                   <span class="c-border">
                     <span class="c-icon">
               </a>
             </div>
           </section>
-          <section class="service">
+          <section class="serviceSection">
             <div class="serviceImg"><img src="<?php echo get_template_directory_uri(); ?>/img/service.jpg" alt="serviceイメージ" width="90%"></div>
             <div class="serviceCnt">
               <h3 class="serviceTlt">サービス</h3>

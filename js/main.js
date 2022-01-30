@@ -1,3 +1,5 @@
+
+
 var mySwiper = new Swiper(".swiper-container", {
         // スライドの仕方
         effect: "fade",
@@ -273,3 +275,25 @@ $('.select').change(function () {
   if r = oshirase,
     //ここに処理を記述する
 }); */
+
+// スクロール禁止
+function no_scroll() {
+    // PCでのスクロール禁止
+    document.addEventListener("mousewheel", scroll_control, { passive: false });
+    // スマホでのタッチ操作でのスクロール禁止
+    document.addEventListener("touchmove", scroll_control, { passive: false });
+}
+// スクロール禁止解除
+function return_scroll() {
+    // PCでのスクロール禁止解除
+    document.removeEventListener("mousewheel", scroll_control, { passive: false });
+    // スマホでのタッチ操作でのスクロール禁止解除
+    document.removeEventListener('touchmove', scroll_control, { passive: false });
+}
+
+// スクロール関連メソッド
+function scroll_control(event) {
+    event.preventDefault();
+}
+
+// $('#loading-screen').addClass('no_scroll');
