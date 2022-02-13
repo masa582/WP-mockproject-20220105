@@ -1,38 +1,38 @@
 <?php
 
-function add_css(){
- 
- wp_enqueue_style('reset', get_template_directory_uri() . '/css/reset.css');
+function add_css()
+{
 
- if (is_home()) {
-  wp_enqueue_style( 'style', get_template_directory_uri() . '/style.css');
- }
-  elseif(is_404()){
-  wp_enqueue_style('404', get_template_directory_uri() . '/style-notfound.css');
-}
-   elseif (is_archive('news')) {
-     wp_enqueue_style('news', get_template_directory_uri() . '/style-news_list_1.css');
-   } 
-   elseif (is_single()) {
+  wp_enqueue_style('reset', get_template_directory_uri() . '/css/reset.css');
+
+  if (is_home()) {
+    wp_enqueue_style('style', get_template_directory_uri() . '/style.css');
+  } elseif (is_404()) {
+    wp_enqueue_style('404', get_template_directory_uri() . '/style-notfound.css');
+  } elseif (is_archive('news')) {
+    wp_enqueue_style('news', get_template_directory_uri() . '/style-news_list_1.css');
+  } elseif (is_single()) {
     wp_enqueue_style('news', get_template_directory_uri() . '/style-news_content.css');
   }
 }
-add_action('wp_print_styles','add_css');
+add_action('wp_print_styles', 'add_css');
 add_filter('show_admin_bar', '__return_false');
 
 
-function create_post_type() {
+function create_post_type()
+{
 
- register_post_type( 'news',
- array(
- 'labels' => array(
- 'name' => __( 'news' ), // 表示する投稿タイプ名
-        'has_archive' => true, 
- 'singular_name' => __( 'news' )
- ),
- 'public' => true,
- 'menu_position' =>5,
- 'has_archive' => true,
+  register_post_type(
+    'news',
+    array(
+      'labels' => array(
+        'name' => __('news'), // 表示する投稿タイプ名
+        'has_archive' => true,
+        'singular_name' => __('news')
+      ),
+      'public' => true,
+      'menu_position' => 5,
+      'has_archive' => true,
       'supports'            => array(
         'title',        // 編集ページのタイトル
         'editor',       // 編集ページの本文エディタ
@@ -41,28 +41,30 @@ function create_post_type() {
         'excerpt', 'author', 'trackbacks', 'comments', 'revisions', 'page-attributes'
       )
 
-));
-
+    )
+  );
 }
 add_action('init', 'create_post_type');
 //アイキャッチ画像
 add_theme_support('post-thumbnails');
 
-function twpp_enqueue_scripts(){
+function twpp_enqueue_scripts()
+{
 
- //JS
-wp_enqueue_script('main-js-sheet',get_template_directory_uri() . '/js/main.js',array(),false,true);
- wp_enqueue_script('jquery', get_template_directory_uri(). '/js/jquery-3.6.0.min.js', array(), '3.6.0', true);
+  //JS
+  wp_enqueue_script('main-js-sheet', get_template_directory_uri() . '/js/main.js', array(), false, true);
+  wp_enqueue_script('jquery', get_template_directory_uri() . '/js/jquery-3.6.0.min.js', array(), '3.6.0', true);
 }
+
 add_action('wp_enqueue_scripts', 'twpp_enqueue_scripts');
 
 
-  function replaceImagePath($arg)
-  {
-   $content = str_replace('"img/', '"' . get_bloginfo('template_directory') . '/img/', $arg);
-   return $content;
-  }
-  add_action('the_content', 'replaceImagePath');
+function replaceImagePath($arg)
+{
+  $content = str_replace('"img/', '"' . get_bloginfo('template_directory') . '/img/', $arg);
+  return $content;
+}
+add_action('the_content', 'replaceImagePath');
 
 function the_pagination()
 {
@@ -84,6 +86,3 @@ function the_pagination()
   ));
   echo '</nav>';
 }
-
-  
-  ?>
