@@ -3,7 +3,7 @@
 Template Name: news_list_1
 */
 ?>
-<?php get_header('single'); ?>
+<?php get_header(); ?>
 </div>
 <main class="main">
       <section class="news_mainBg_wrapper">
@@ -17,11 +17,11 @@ Template Name: news_list_1
                   <div class="newsCntSec">
                         <?php if (have_posts()) : ?>
                               <?php while (have_posts()) : the_post(); ?>
-                                    <dl id="newsCnt-Btline">
-                                          <dt id="newsDate"><?php the_time('Y年m月d日'); ?></dt>
-                                          <dd id="newsCard2" class="newsCard <?php echo get_field('news_category')['value']; ?>">
+                                    <dl data-type="<?php echo get_field('news_category')['value']; ?>">
+                                          <dt class="newsDate"><?php the_time('Y年m月d日'); ?></dt>
+                                          <dd class="newsCard <?php echo get_field('news_category')['value']; ?>">
                                                 <?php echo get_field('news_category')['label']; ?></dd>
-                                          <dd id="newsCnt"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></dd>
+                                          <dd class="newsCnt"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></dd>
                                     </dl>
 
                               <?php endwhile; ?>
@@ -44,8 +44,8 @@ Template Name: news_list_1
                   </div>
 
                   <div class="combo">
-                        <select id="selbox" onchange="change20()">
-                              <option value="">カテゴリ</option>
+                        <select id="choose_type_select" onchange="refreshList();">
+                              <option value="category">カテゴリ</option>
                               <option value="info">お知らせ</option>
                               <option value="service">サービス</option>
                         </select>
@@ -53,12 +53,38 @@ Template Name: news_list_1
             </div>
       </section>
 
-      <div id="Sosen">
-            <div id="Oya">
-                  <div id="Kodomo">子ども</div>
-            </div>
-      </div>
-
 </main>
+<script>
+	
+	// after page load change select to the saved state value
+	
+	document.addEventListener("DOMContentLoaded", function(){
+    	saved_state = localStorage.chtype_select
+		if(saved_state != null){
+			jQuery("#choose_type_select").val(saved_state).change();
+		}
+	});
+	
+	function refreshList(){
+		data = jQuery( "#choose_type_select").val();
+		// save select state to the storage
+		localStorage.chtype_select = data;
+		
+		if(data == "category"){
+			jQuery('[data-type~="info"]').show();
+			jQuery('[data-type~="service"]').show();
+		}
+		
+		if(data == "info"){
+			jQuery('[data-type~="info"]').show();
+			jQuery('[data-type~="service"]').hide();
+		}
+		
+		if(data == "service"){
+			jQuery('[data-type~="service"]').show();
+			jQuery('[data-type~="info"]').hide();
+		}		
+	}
+</script>	
 
 <?php get_footer(); ?>

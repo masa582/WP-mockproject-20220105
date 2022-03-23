@@ -6,7 +6,8 @@
     </div>
     <div class="cover">
 
-      <video playsinline src="<?php echo get_template_directory_uri(); ?>/video/movie_2.mp4" loop autoplay muted class="video">
+      <video playsinline src="<?php echo get_template_directory_uri(); ?>/video/movie_2.mp4" loop autoplay muted
+        class="video">
         <p>動画を再生するには、videoタグをサポートしたブラウザが必要です。</p>
       </video>
     </div>
@@ -34,25 +35,23 @@
                 $the_query = new WP_Query($args);
 
                 if ($the_query->have_posts()) : ?>
-                  <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
-                    <dl>
-                      <dt><?php the_time('Y年m月d日'); ?></dt>
-                      <dd class="newsCard <?php echo get_field('news_category')['value'];
+                <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+                <dl>
+                  <dt><?php the_time('Y年m月d日'); ?></dt>
+                  <dd class="newsCard <?php echo get_field('news_category')['value'];
                                           ?>">
-                        <?php echo get_field('news_category')['label']; ?></dd>
-                      <dd class="newsCnt"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></dd>
-                    </dl>
+                    <?php echo get_field('news_category')['label']; ?></dd>
+                  <dd class="newsCnt"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></dd>
+                </dl>
 
-                  <?php endwhile; ?>
-                  <?php wp_reset_postdata(); ?>
+                <?php endwhile; ?>
+                <?php wp_reset_postdata(); ?>
                 <?php else : ?>
-                  <!-- 投稿が無い場合の処理 -->
+                <!-- 投稿が無い場合の処理 -->
                 <?php endif; ?>
 
               </div>
             </div>
-
-
             <div class="secBox_btn">
               <a href="/news/" class="c-buttonStyle1">
                 <span class="c-label">View More
@@ -62,7 +61,8 @@
             </div>
           </section>
           <section class="serviceSection">
-            <div class="serviceImg"><img src="<?php echo get_template_directory_uri(); ?>/img/service.jpg" alt="serviceイメージ" width="90%"></div>
+            <div class="serviceImg"><img src="<?php echo get_template_directory_uri(); ?>/img/service.jpg"
+                alt="serviceイメージ" width="90%"></div>
             <div class="serviceCnt">
               <h3 class="serviceTlt">サービス</h3>
               <p class="serviceTlt_EN">service</p>
@@ -104,7 +104,6 @@
               <!-- ページネーション -->
               <div class="swiper-pagination"></div>
               <!-- ナビゲーションボタンの div 要素（省略可能） -->
-
             </div>
           </section>
 

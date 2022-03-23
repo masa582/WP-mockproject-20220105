@@ -3,7 +3,7 @@
 Template Name: news_list_1
 */
 ?>
-<?php get_header('inquiry'); ?>
+<?php get_header(); ?>
 </div>
 <main class="main">
   <section>
@@ -21,7 +21,7 @@ Template Name: news_list_1
         <p>記入内容の確認後、2～3営業日以内にご連絡させていただきます。</p><br><br><br>
       </div>
 
-      <?php echo do_shortcode('[contact-form-7 id="91" title="お問い合わせフォーム"]'); ?> 
+      <?php echo do_shortcode('[contact-form-7 id="91" title="お問い合わせフォーム"]'); ?>
     </div>
   </section>
   <!-- </section> -->

@@ -9,7 +9,9 @@
         <div>
           <p class="footerSnsttl">Follow us</p>
           <div class="footerSnsflex">
-            <a href="#"> <img src="<?php echo get_template_directory_uri(); ?>/img/facebook_icon.png" alt="facebookアイコン"></a> <a href="#"> <img src="<?php echo get_template_directory_uri(); ?>/img/twitter_icon.png" alt="twitterアイコン"></a> <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/instagram_icon.png" alt="instagramアイコン"></a>
+            <a href="https://www.facebook.com/profile.php?id=100078368505196"> <img src="<?php echo get_template_directory_uri(); ?>/img/facebook_icon.png" alt="facebookアイコン"></a>
+            <a href="https://twitter.com/portfoliomarum1"> <img src="<?php echo get_template_directory_uri(); ?>/img/twitter_icon.png" alt="twitterアイコン"></a>
+            <a href="https://www.instagram.com/portfolio_marumaru/"><img src="<?php echo get_template_directory_uri(); ?>/img/instagram_icon.png" alt="instagramアイコン"></a>
           </div>
         </div>
       </div>
@@ -20,19 +22,27 @@
   <script src="<?php echo get_template_directory_uri(); ?>/js/jquery-3.6.0.min.js"></script>
   <?php if (is_home()) : ?>
     <script src="<?php echo get_template_directory_uri(); ?>/js/scroll-controll.js"></script>
-    <?php endif; ?>
-    <?php if (is_archive('news')) : ?>
+  <?php endif; ?>
+  <?php if (is_archive('news')) : ?>
     <script src="<?php echo get_template_directory_uri(); ?>/js/sort-newslist.js"></script>
   <?php endif; ?>
   <script src="<?php echo get_template_directory_uri(); ?>/js/TweenMax.min.js"></script>
   <script src="<?php echo get_template_directory_uri(); ?>/js/ScrollMagic.min.js"></script>
-  <script src="<?php echo get_template_directory_uri(); ?>/js/locomotive-scroll.min.js"></script>
+  <!-- <script src="<?php echo get_template_directory_uri(); ?>/js/locomotive-scroll.min.js"></script> -->
   <script src="<?php echo get_template_directory_uri(); ?>/js/swiper-bundle.min.js"></script>
   <script>
     $(window).on('load', () => {
       $('.loading-screen').fadeOut(2000);
     })
   </script>
+  <script>
+    jQuery('#hamburger').on('click', function() {
+      jQuery('.icon').toggleClass('close');
+      jQuery('.sm').slideToggle();
+
+    });
+  </script>
+
   <?php wp_footer(); ?>
 
   </body>

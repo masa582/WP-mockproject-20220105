@@ -2,164 +2,14 @@
 
 /* ここから　全体に適用 */
 
-box-sizing: border-box *, *:before, *:after {
+box-sizing: border-box *,
+*:before,
+*:after {
     -webkit-box-sizing: border-box;
     box-sizing: border-box
 }
 
-[data-aos="text-animation"]>div>span {
-    overflow-y: hidden;
-    display: inline-block;
-    opacity: 0;
-    -webkit-transform: translate(0, 70%);
-    transform: translate(0, 70%)
-}
-
-[data-aos="text-animation"].aos-animate>div>span {
-    -webkit-animation-name: textAnimationText;
-    animation-name: textAnimationText;
-    -webkit-animation-delay: 0.4s;
-    animation-delay: 0.4s;
-    -webkit-animation-duration: 0.5s;
-    animation-duration: 0.5s;
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out
-}
-
-[data-aos="topsec-animation"].aos-animate {
-    -webkit-animation-name: topsecAnimation;
-    animation-name: topsecAnimation;
-    -webkit-animation-duration: 0.5s;
-    animation-duration: 0.5s;
-    -webkit-animation-delay: 0.7s;
-    animation-delay: 0.7s;
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out
-}
-
-[data-aos="title-animation"].aos-animate span {
-    -webkit-animation-name: titleAnimationText;
-    animation-name: titleAnimationText;
-    -webkit-animation-duration: 0.4s;
-    animation-duration: 0.4s;
-    -webkit-animation-delay: 1s;
-    animation-delay: 1s;
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards
-}
-
-[data-aos="title-animation"].aos-animate:before {
-    -webkit-animation-name: titleAnimationLine;
-    animation-name: titleAnimationLine;
-    -webkit-animation-delay: 0.5s;
-    animation-delay: 0.5s;
-    -webkit-animation-duration: 0.5s;
-    animation-duration: 0.5s;
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards
-}
-
-#index .secBox_img.aos-animate {
-    opacity: 1;
-    -webkit-transform: translate(0, 0);
-    transform: translate(0, 0)
-}
-
-#index .secBox_img.aos-animate img {
-    opacity: 1
-}
-
-#index .secBox_img#about_usImg.aos-animate img {
-    -webkit-transform: translate(0, 0);
-    transform: translate(0, 0)
-}
-
-#index .secWrap .sec.aos-animate .secTit span {
-    -webkit-transform: translate(0px, 0px);
-    transform: translate(0px, 0px)
-}
-
-#index .secWrap .sec.aos-animate .secTit::before {
-    height: 140px
-}
-
-[data-aos="new-animation"]:before {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 10;
-    background: #EAEAEA;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
-    -webkit-transition-delay: 0.2s;
-    transition-delay: 0.2s
-}
-
-[data-aos="new-animation"].aos-animate:before {
-    width: 0
-}
-
-#business.index .project .projectBox.aos-animate .projectBox_img:before {
-    width: 0
-}
-
-#business.index .project .projectBox.aos-animate .projectBox_img:before {
-    width: 0
-}
-
-[data-aos="new-animation2"] {
-    position: relative
-}
-
-[data-aos="new-animation2"]:after, [data-aos="new-animation2"]:before {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 10
-}
-
-[data-aos="new-animation2"]:after {
-    background: #EAEAEA;
-    z-index: 1
-}
-
-[data-aos="new-animation2"].aos-animate:after {
-    -webkit-animation-name: slideCoverBottom;
-    animation-name: slideCoverBottom;
-    -webkit-animation-duration: 0.8s;
-    animation-duration: 0.8s;
-    -webkit-animation-delay: 0.8s;
-    animation-delay: 0.8s;
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards
-}
-
-[data-aos="new-animation2"].aos-animate:before {
-    -webkit-animation-name: slideCoverTop;
-    animation-name: slideCoverTop;
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards
-}
-
 /* ここから  開始　　　　　ここから  開始　　　　　　　　　　　*/
-
-.index {
-    color: #fff;
-}
 
 .wrapper {
     overflow: hidden;
@@ -423,7 +273,8 @@ box-sizing: border-box *, *:before, *:after {
     transition: 0.3s
 }
 
-.c-buttonStyle1 .c-border:before, .c-buttonStyle1 .c-border:after {
+.c-buttonStyle1 .c-border:before,
+.c-buttonStyle1 .c-border:after {
     content: '';
     display: block;
     height: 1px;
@@ -453,7 +304,8 @@ box-sizing: border-box *, *:before, *:after {
     transition: 0.3s
 }
 
-.c-buttonStyle1 .c-icon:before, .c-buttonStyle1 .c-icon:after {
+.c-buttonStyle1 .c-icon:before,
+.c-buttonStyle1 .c-icon:after {
     content: '';
     display: block;
     position: absolute;
@@ -538,11 +390,14 @@ box-sizing: border-box *, *:before, *:after {
     padding-bottom: 6px
 }
 
-.navigationInnerList li>a.is-current .c-border:before, .navigationInnerList li>a.is-open .c-border:before, .navigationInnerList li>a:hover .c-border:before {
+.navigationInnerList li>a.is-current .c-border:before,
+.navigationInnerList li>a.is-open .c-border:before,
+.navigationInnerList li>a:hover .c-border:before {
     width: 100%
 }
 
-.navigationInnerList li .subNavTit a .c-border:before, .navigationInnerList li .subNavTit a .c-border:after {
+.navigationInnerList li .subNavTit a .c-border:before,
+.navigationInnerList li .subNavTit a .c-border:after {
     content: "";
     display: block;
     height: 1px;

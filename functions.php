@@ -14,6 +14,9 @@ function add_css()
   } elseif (is_single()) {
     wp_enqueue_style('news', get_template_directory_uri() . '/style-news_content.css');
   }
+  elseif (is_page('inquiry')) {
+    wp_enqueue_style('news', get_template_directory_uri() . '/style-news_inquiry.css');
+  }
 }
 add_action('wp_print_styles', 'add_css');
 add_filter('show_admin_bar', '__return_false');

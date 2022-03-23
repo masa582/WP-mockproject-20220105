@@ -3,7 +3,7 @@
 Template Name: news_list_1
 */
 ?>
-<?php get_header('inquiry'); ?>
+<?php get_header(); ?>
 </div>
 <main class="main">
   <section>
