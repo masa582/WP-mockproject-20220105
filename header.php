@@ -24,11 +24,7 @@
   <?php if (is_home()) { ?>
     <div class="wrapper">
 
-      <!-- ここからSPの記述 -->
-
-
-
-      <!-- ここからPCの記述 -->
+      <!-- ここからロゴの記述 -->
       <header class="header">
         <div class="header-wrap">
           <a href="/">
@@ -46,7 +42,6 @@
         </div>
         <!--△△ハンバーガーメニュー△△-->
 
-        
         <!--▽▽ハンバーガーメニューのリスト▽▽-->
         <div class="sm">
           <nav>

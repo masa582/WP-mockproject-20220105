@@ -30,7 +30,7 @@ box-sizing: border-box *, *:before, *:after {
   bottom: -100px;
   background-color: #404040;
   z-index: 1200;
-  width: 100%;
+  width: 100vw;
   height: 100%;
 }
 
@@ -314,30 +314,34 @@ img {
     display: none;
   }
 
-  .wrapper{
-   position: absolute;
-   top: 0px;
+  .wrapper {
+    position: absolute;
+    top: 0px;
   }
+
   .logo {
     width: 300px;
     height: auto;
+    position: fixed;
+    z-index: 51;
   }
 
   .header {
     display: flex;
     justify-content: space-between;
     margin: 2rem 7rem;
-    /* max-width: 70rem; */
-    /* position: fixed; */
   }
 
   #hamburger {
     background-color: transparent;
-    position: relative;
+    position: fixed;
     cursor: pointer;
     /* margin: 0 0 0 auto; */
     height: 60px;
     width: 60px;
+    top: 30px;
+    right: 50px;
+    z-index: 50;
   }
 
   .icon span {
@@ -380,18 +384,18 @@ img {
     display: none;
     top: 80px;
     left: 0px;
-    height: 300px;
+    height: 250px;
     position: absolute;
     z-index: 10;
-    width: 100%;
+    width: 100vw;
     background-color: #917041;
     margin-top: 20px;
   }
 
-  .menu-list-SP{
+  .menu-list-SP {
     text-align: center;
-    padding: 30px;
-    font-size: 3rem;
+    padding: 20px;
+    font-size: 2rem;
   }
 
   ul {
@@ -400,6 +404,7 @@ img {
 
   a {
     text-align: center;
+    font-size: 2rem;
   }
 
 }
@@ -410,13 +415,47 @@ img {
     display: none;
   }
 
+  .wrapper {
+    position: absolute;
+    top: 0px;
+  }
+
+  .logo {
+    width: 250px;
+    height: auto;
+    position: fixed;
+    padding-top: 10px;
+    z-index: 51;
+  }
+
   #hamburger {
     background-color: transparent;
-    position: relative;
+    position: fixed;
     cursor: pointer;
-    margin: 0 0 0 auto;
+    /* margin: 0 0 0 auto; */
     height: 60px;
     width: 60px;
+    top: 30px;
+    right: 50px;
+    z-index: 50;
+  }
+
+  .sm {
+    display: none;
+    top: 80px;
+    left: 0px;
+    height: 300px;
+    position: absolute;
+    z-index: 10;
+    width: 100vw;
+    background-color: #917041;
+    margin-top: 20px;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 7rem;
   }
 
   .icon span {
@@ -455,13 +494,10 @@ img {
     top: 28px;
   }
 
-  .sm {
-    top: 60px;
-    left: 0px;
-    position: absolute;
-    z-index: 10;
-    width: 100%;
-    background-color: rgba(34, 49, 52, 0.9);
+  .menu-list-SP {
+    text-align: center;
+    padding: 30px;
+    font-size: 2rem;
   }
 
   ul {
@@ -517,11 +553,37 @@ img {
   z-index: 2;
 }
 
-.row {
-  position: absolute;
-  top: 12%;
-  left: 30%;
-  font-size: 8vw;
+
+
+@media screen and (min-width:1200px) {
+
+  .row {
+    position: absolute;
+    top: 12%;
+    left: 30%;
+    font-size: 8vw;
+  }
+
+}
+
+@media screen and (min-width:768px) and (max-width:1200px) {
+  .row {
+    position: absolute;
+    top: 12%;
+    left: 28%;
+    font-size: 6vw;
+  }
+}
+
+@media screen and (max-width:767px) {
+  .row {
+    position: absolute;
+    top: 12%;
+    left: 25%;
+    font-size: 6vw;
+
+  }
+
 }
 
 .row2 {
@@ -606,9 +668,37 @@ img {
 
 /* newsの部分 */
 
-.news {
-  margin: 5rem 20rem;
+
+
+@media screen and (min-width: 1200px) {
+
+  .news {
+    margin: 5rem 20rem;
+  }
+
 }
+
+
+@media screen and (min-width:768px) and (max-width:1200px) {
+
+  .news {
+    margin: 5rem 10rem;
+    padding-right: 20rem;
+  }
+
+
+}
+
+@media screen and (max-width:767px) {
+
+  .news {
+    margin: 5rem 5rem;
+    padding-right: 50rem;
+  }
+
+
+}
+
 
 .newsttl {
   font-size: 5rem;
@@ -705,10 +795,31 @@ img {
   font-size: 2rem;
 }
 
-.secBox_btn {
-  margin-top: 20px;
-  text-align: right;
+@media screen and (min-width: 1200px) {
+  .secBox_btn {
+    margin-top: 20px;
+    text-align: right;
+  }
+
 }
+
+@media screen and (min-width:768px) and (max-width:1200px) {
+  .secBox_btn {
+    margin-top: 20px;
+    text-align: right;
+    /* padding-right: 30rem; */
+  }
+
+}
+
+@media screen and (max-width: 767px) {
+  .secBox_btn {
+    margin: 20px 0px;
+    text-align: right;
+    /* padding-right: 50rem; */
+  }
+}
+
 
 .c-buttonStyle1 {
   display: inline-block;
