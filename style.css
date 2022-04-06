@@ -302,11 +302,12 @@ img {
     padding-bottom: 6px;
   }
 
+  /* .sm {
+    display: none;
+  } */
   .sm {
     display: none;
   }
-
-
 }
 
 @media screen and (min-width:768px) and (max-width:1200px) {
@@ -384,8 +385,8 @@ img {
     display: none;
     top: 80px;
     left: 0px;
-    height: 250px;
-    position: absolute;
+    height: 200px;
+    position: fixed;
     z-index: 10;
     width: 100vw;
     background-color: #917041;
@@ -438,18 +439,6 @@ img {
     top: 30px;
     right: 50px;
     z-index: 50;
-  }
-
-  .sm {
-    display: none;
-    top: 80px;
-    left: 0px;
-    height: 300px;
-    position: absolute;
-    z-index: 10;
-    width: 100vw;
-    background-color: #917041;
-    margin-top: 20px;
   }
 
   .header {
@@ -569,19 +558,43 @@ img {
 @media screen and (min-width:768px) and (max-width:1200px) {
   .row {
     position: absolute;
-    top: 12%;
+    top: 8%;
     left: 28%;
     font-size: 6vw;
+  }
+
+  .row2 {
+    height: 80vh;
+  }
+
+  .companyTlt_EN {
+    margin-bottom: 8rem;
+    position: absolute;
+    top: 5rem;
+  }
+
+  .swiper-container {
+    width: 45rem;
+    height: 49rem;
+    overflow: hidden;
+    list-style: none;
+    position: absolute;
+    top: 9rem;
+
   }
 }
 
 @media screen and (max-width:767px) {
   .row {
     position: absolute;
-    top: 12%;
+    top: 8%;
     left: 25%;
     font-size: 6vw;
 
+  }
+
+  .row2 {
+    height: 80vh;
   }
 
 }
@@ -682,7 +695,7 @@ img {
 @media screen and (min-width:768px) and (max-width:1200px) {
 
   .news {
-    margin: 5rem 10rem;
+    margin: 5rem 15rem;
     padding-right: 20rem;
   }
 
@@ -692,8 +705,9 @@ img {
 @media screen and (max-width:767px) {
 
   .news {
-    margin: 5rem 5rem;
+    margin: 5rem 15rem;
     padding-right: 50rem;
+    text-align: center;
   }
 
 
@@ -770,8 +784,20 @@ img {
   border-bottom: 1px solid;
 }
 
-.newsCnt a {
-  display: flex;
+
+
+
+@media screen and (min-width:1200px) {
+  .newsCnt a {
+    display: flex;
+  }
+}
+
+@media screen and (min-width:768px) and (max-width:1200px) {
+  .newsCnt a {
+    display: flex;
+    font-size: 1.5rem;
+  }
 }
 
 .newsDate {
@@ -987,11 +1013,74 @@ img {
 
 /* serviceの部分 */
 
+@media screen and (min-width: 1200px) {
+
+  .serviceSection {
+    height: 55vh;
+    margin: 0rem 20rem 10rem 20rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+
+}
+
+@media screen and (min-width: 768px)and (max-width: 1200px) {
+  .serviceSection {
+    height: 80vh !important;
+    width: 100%;
+    margin: 0rem 10rem 5rem 10rem;
+    position: relative;
+  }
+
+  .serviceImg img {
+    height: 450px;
+    width: 450px;
+    object-fit: cover;
+    padding-bottom: 3rem;
+    margin-top: 10rem;
+  }
+
+  .serviceTlt {
+    position: absolute;
+    top: 0;
+
+  }
+
+  .serviceTlt_EN {
+    position: absolute;
+    top: 6rem;
+    left: 1rem;
+  }
+
+  .service_Txt1 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem !important;
+    white-space: nowrap;
+  }
+
+  .service_Txt2 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem !important;
+  }
+
+  .service_Txt3 {
+    font-size: 1.5rem;
+    margin-bottom: 4rem !important;
+  }
+
+  .serviceCnt {
+    width: 70%;
+  }
+}
+
+
+@media screen and (max-width: 767px) {}
+
 .serviceSection {
   height: 55vh;
-  margin: 0rem 20rem 10rem 20rem;
-  display: flex;
-  justify-content: space-between;
+  margin: 0rem 10rem 5rem 15rem;
+  position: relative;
 }
 
 .serviceImg {
@@ -1118,6 +1207,52 @@ img {
 .swiper-img4 img {
   width: 45rem;
   height: 45rem;
+}
+
+@media screen and (min-width:768px) and (max-width:1200px) {
+
+  .company {
+    height: 92vh;
+    margin: 0rem 10rem 5rem 15rem;
+    align-items: stretch;
+    position: relative;
+  }
+
+  .companyCnt {
+    width: 45%;
+    height: 50vh;
+    min-height: 400px;
+    margin-right: 2rem;
+    position: absolute;
+    top: 5rem;
+  }
+
+  .company_Txt1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    white-space: nowrap;
+    position: absolute;
+    top: 61rem;
+    width: 100%;
+  }
+
+  .company_Txt2 {
+    width: 100%;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    position: absolute;
+    top: 67rem;
+  }
+
+  .swiper-container {
+    width: 45rem;
+    height: 49rem;
+    margin-top: 5rem;
+    overflow: hidden;
+    list-style: none;
+    position: relative;
+  }
+
 }
 
 /*swiperのページネーション */
@@ -1296,4 +1431,56 @@ img {
 .footerSnsttl {
   font-size: 3rem;
   padding-bottom: 20px;
+}
+
+@media screen and (min-width:768px) and (max-width:1200px) {
+
+  .footer {
+    display: block;
+    background: #000;
+    height: 300px;
+    padding: 50px 5%;
+    z-index: 101;
+    position: relative;
+  }
+
+  .footerBtm {}
+
+  .footerSns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 22rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .footerCright {
+    font-size: 1.5rem;
+    padding-top: 12rem;
+    white-space: nowrap;
+  }
+
+  .footerSns img {
+    width: 40px;
+    height: 40px;
+    margin-right: 1rem;
+  }
+
+  .footerSnsttl {
+    font-size: 2.5rem;
+    padding-bottom: 20px;
+    padding-right: 2rem;
+  }
+
+  .footer_address{
+    padding-left: 15rem;
+    padding-right:5rem ;
+  }
+}
+
+@media screen and (max-width: 767px) {
+
+ 
 }
